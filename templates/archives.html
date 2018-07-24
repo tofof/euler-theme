@@ -3,14 +3,17 @@
 {% block title %}Archives / {{SITENAME}}{% endblock %}
 
 {% block content %}
-    <section>
-    {% for article in dates %}
-        <article>
-            <time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>:
+   <article><header style="margin-bottom: 10px"><h1><i class="icon-th-list" style="margin-left:-21px; margin-right:5px; margin-top:-4px" title="Articles"></i>
+    <a href="{{SITEURL}}/archives.html">Articles for {{ SITENAME }}</a></h1></header></article>
+
+    <ul style="list-style: none;">
+        {% for article in dates %}
+            <li><time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>:
             <a href="{{SITEURL}}/{{article.url}}">
                 {{article.title}}
-            </a>
-        </article>
-    {% endfor %}
-    </section>
+            </a></li>
+        {% endfor %}
+    </ul>
 {% endblock %}
+
+

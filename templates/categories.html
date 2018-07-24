@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Categories / {{SITENAME}}{% endblock %}
+
+
+{% block content %}
+   <article><header style="margin-bottom: 10px"><h1>
+    <a href="{{SITEURL}}/categories.html"><i class="icon-folder-open" style="margin-left:-21px; margin-right:5px; margin-top:-4px" title="Categories"></i>Categories for {{ SITENAME }}</a></h1></header></article>
+
+	<ul style="list-style: none;">
+		{% for category, articles in categories %}
+		    <li><a href="{{ SITEURL }}/{{ category.url }}"><i class="icon-folder-close" style="margin-left:-21px; margin-right:5px; margin-top:-2px" title="Category"></i>{{ category }}</a> ({{ articles|count }})</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

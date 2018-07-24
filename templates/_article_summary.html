@@ -1,8 +1,8 @@
 {% extends '_article_base.html' %}
 
 {% block article_content %}
-    <div class="article-summary">
-        <!-- show full content instead of summary -->
-        {{article.content}}
-    </div>
+    {{article.summary}}
+    {% if (article.summary|length) < (article.content|length) %}   
+    	<span class="summary-footer"><a href="{{SITEURL}}/{{article.url}}">Read more…</a></span>
+    {% endif %}
 {% endblock %}
