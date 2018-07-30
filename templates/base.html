@@ -18,6 +18,7 @@
 
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="{{SITEURL}}/theme/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/colorbox.css">
 
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/main.css">
@@ -51,80 +52,33 @@
                     <footer id="site-footer">
                         <p>
                             <a href="{{LICENSE_URL}}" target="_blank">
-                                {{LICENSE_NAME}}
-                            </a> {{AUTHOR}} /
-                            <a href="{{SITEURL}}/{{ARCHIVES_URL}}">Archives</a>
+                                {{LICENSE_IMAGE}}
+                            </a>
+                            </a> {{AUTHOR}}
                         </p>
-<!--   
-Commented Out by Tofof
-
                         <p>
+                            Website
+                            <a href="http://github.com/tofof/tofof.com" target="blank">
+                                source code
+                            </a>
+                            and
+                        
+                            <a href="http://github.com/tofof/euler-theme" target="_blank">
+                                'Euler' theme 
+                            </a>
+                            (GPLv3)
+                            /
                             Powered by
                             <a href="https://github.com/getpelican/pelican" target="_blank">
                                 Pelican
                             </a>
-                            /
-                            Source code on
-                            <a href="http://github.com/siovene/iovene.com" target="blank">
-                                GitHub
-                            </a>
-                            /
-                            Theme <code>Lannisport</code>, also on
-                            <a href="http://github.com/siovene/lannisport" target="_blank">
-                                GitHub
-                            </a>
                         </p>
--->                        
+                       
                     </footer>
                 </div> <!-- header+content+footer span -->
 
                 <div class="span4">
                     <aside id="sidebar">
-                        <div id="social-icons">
-                            {% if GITHUB_URL %}
-                                <span class="social-icon">
-                                    <a href="{{GITHUB_URL}}" target="_blank" title="GitHub">
-                                        <img src="{{SITEURL}}/theme/img/GitHub.png" alt="GitHub"/>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if LINKEDIN_URL %}
-                                <span class="social-icon">
-                                    <a href="{{LINKEDIN_URL}}" target="_blank" title="LinkedIn">
-                                        <img src="{{SITEURL}}/theme/img/LinkedIn.png" alt="LinkedIn"/>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if TWITTER_URL %}
-                                <span class="social-icon">
-                                    <a href="{{TWITTER_URL}}" target="_blank" title="Twitter">
-                                        <img src="{{SITEURL}}/theme/img/Twitter.png" alt="Twitter"/>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if GOOGLE_URL %}
-                                <span class="social-icon">
-                                    <a href="{{GOOGLE_URL}}" target="_blank" title="Google">
-                                        <img src="{{SITEURL}}/theme/img/Google.png" alt="Google"/>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if FACEBOOK_URL %}
-                                <span class="social-icon">
-                                    <a href="{{FACEBOOK_URL}}" target="_blank" title="Facebook">
-                                        <img src="{{SITEURL}}/theme/img/Facebook.png" alt="Facebook"/>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if FLICKR_URL %}
-                                <span class="social-icon">
-                                    <a href="{{FLICKR_URL}}" target="_blank" title="Flickr">
-                                        <img src="{{SITEURL}}/theme/img/Flickr.png" alt="Flickr"/>
-                                    </a>
-                                </span>
-                            {% endif %}
-                        </div>
-
                         <div id="site-logo">
                             <a href="{{SITEURL}}">
                                 <img alt="{{SITENAME}}" src="{{SITEURL}}/{{SITELOGO}}"/>
@@ -133,6 +87,49 @@ Commented Out by Tofof
 
                         <div id="navigation">
                             {% include 'navigation.html' %}
+                        </div>
+                        
+                        <div id="social-icons">
+                            {% if EMAIL_URL %}
+                                <span class="social-icon">
+                                    <a href="mailto:{{EMAIL_URL}}" target="_blank" title="Email"><i class="icon-envelope"></i></a>
+                                </span>
+                            {% endif %}
+                            {% if GITHUB_URL %}
+                                <span class="social-icon">
+                                    <a href="{{GITHUB_URL}}" target="_blank" title="GitHub">
+                                        <i class="icon-github-alt"></i>
+                                    </a>
+                                </span>
+                            {% endif %}
+                            {% if LINKEDIN_URL %}
+                                <span class="social-icon">
+                                    <a href="{{LINKEDIN_URL}}" target="_blank" title="LinkedIn">
+                                        <i class="icon-linkedin"></i>
+                                    </a>
+                                </span>
+                            {% endif %}
+                            {% if TWITTER_URL %}
+                                <span class="social-icon">
+                                    <a href="{{TWITTER_URL}}" target="_blank" title="Twitter">
+                                        <i class="icon-twitter"></i>
+                                    </a>
+                                </span>
+                            {% endif %}
+                            {% if GOOGLE_URL %}
+                                <span class="social-icon">
+                                    <a href="{{GOOGLE_URL}}" target="_blank" title="Google">
+                                        <i class="icon-google-plus"></i>
+                                    </a>
+                                </span>
+                            {% endif %}
+                            {% if FACEBOOK_URL %}
+                                <span class="social-icon">
+                                    <a href="{{FACEBOOK_URL}}" target="_blank" title="Facebook">
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                </span>
+                            {% endif %}
                         </div>
                     </aside>
                 </div> <!-- logo+navigation span -->

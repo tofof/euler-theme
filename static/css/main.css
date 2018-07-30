@@ -118,10 +118,27 @@ h1, h2 {
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.5);
 }
 
+.icon-white {
+    color:white;
+}
+
 #social-icons {
-    position: absolute;
-    top: .5rem;
-    right: .5rem;
+    margin-top: .5rem;
+    font-size:1.0rem;
+}
+
+#social-icons {
+    text-align: center;
+}
+
+#social-icons a {
+    padding-left: 0.25rem;
+    color: white;
+}
+
+#social-icons a:hover {
+    padding-left: 0.25rem;
+    color: #bbb;
 }
 
 #sidebar h1, #sidebar h1 a {      
