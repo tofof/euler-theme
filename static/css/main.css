@@ -351,6 +351,7 @@ article footer p {
 .paginator {
     margin-bottom: 2rem;
     color: #999;
+    text-align: center;
 }
 
 blockquote p {
