@@ -31,6 +31,43 @@ h1, h2 {
     text-shadow: 0 1px 2px #aaa;
 }
 
+.row-fluid .span9 {
+    flex-shrink: 1;
+}
+
+@media (min-width: 768px) {
+    .row-fluid {
+        display: flex;
+    }
+    .row-fluid .span4 {
+        max-width: 300px;
+        min-width: 225px;
+    }
+    .container-fluid {
+        margin-left:4%;
+        margin-right:4%;
+        display: flex;
+    }
+}
+
+@media (min-width: 1250px) {
+    .row-fluid .span9 {
+        margin-right:20px;
+    }
+}
+
+@media (min-width: 1325px) {
+    .row-fluid .span9 {
+        margin-right:40px;
+    }
+}
+
+@media (max-width: 767px) {
+  .row-fluid {
+        display: "block";
+    }
+}
+
 .content > section,
 #site-header, #site-footer {
     margin-bottom: 3rem;
