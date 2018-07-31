@@ -18,7 +18,7 @@
 
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="{{SITEURL}}/theme/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/colorbox.css">
 
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/main.css">
@@ -57,21 +57,12 @@
                             </a> {{AUTHOR}}
                         </p>
                         <p>
-                            Website
-                            <a href="http://github.com/tofof/tofof.com" target="blank">
-                                source code
-                            </a>
-                            and
-                        
-                            <a href="http://github.com/tofof/euler-theme" target="_blank">
-                                'Euler' theme 
-                            </a>
-                            (GPLv3)
-                            /
-                            Powered by
-                            <a href="https://github.com/getpelican/pelican" target="_blank">
-                                Pelican
-                            </a>
+                            Website <a href="http://github.com/tofof/tofof.com" target="blank">source code</a> (GPLv3), available at GitHub 
+                            / Powered by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+                        </p>
+                        <p>
+                            <i>Euler</i> <a href="http://github.com/tofof/euler-theme" target="_blank">theme</a> (GPLv3), also available at GitHub
+                            / Powered by <a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a>
                         </p>
                        
                     </footer>
@@ -92,41 +83,41 @@
                         <div id="social-icons">
                             {% if EMAIL_URL %}
                                 <span class="social-icon">
-                                    <a href="mailto:{{EMAIL_URL}}" target="_blank" title="Email"><i class="icon-envelope"></i></a>
+                                    <a href="mailto:{{EMAIL_URL}}" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
                                 </span>
                             {% endif %}
                             {% if GITHUB_URL %}
                                 <span class="social-icon">
                                     <a href="{{GITHUB_URL}}" target="_blank" title="GitHub">
-                                        <i class="icon-github-alt"></i>
+                                        <i class="fab fa-github"></i>
                                     </a>
                                 </span>
                             {% endif %}
                             {% if LINKEDIN_URL %}
                                 <span class="social-icon">
                                     <a href="{{LINKEDIN_URL}}" target="_blank" title="LinkedIn">
-                                        <i class="icon-linkedin"></i>
+                                        <i class="fab fa-linkedin"></i>
                                     </a>
                                 </span>
                             {% endif %}
                             {% if TWITTER_URL %}
                                 <span class="social-icon">
                                     <a href="{{TWITTER_URL}}" target="_blank" title="Twitter">
-                                        <i class="icon-twitter"></i>
+                                        <i class="fab fa-twitter"></i>
                                     </a>
                                 </span>
                             {% endif %}
                             {% if GOOGLE_URL %}
                                 <span class="social-icon">
                                     <a href="{{GOOGLE_URL}}" target="_blank" title="Google">
-                                        <i class="icon-google-plus"></i>
+                                        <i class="fab fa-google-plus"></i>
                                     </a>
                                 </span>
                             {% endif %}
                             {% if FACEBOOK_URL %}
                                 <span class="social-icon">
                                     <a href="{{FACEBOOK_URL}}" target="_blank" title="Facebook">
-                                        <i class="icon-facebook"></i>
+                                        <i class="fab fa-facebook"></i>
                                     </a>
                                 </span>
                             {% endif %}
