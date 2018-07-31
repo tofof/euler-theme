@@ -120,8 +120,12 @@ h1, h2 {
 
 .icon-white {
     color:white;
-    style="font-size:1.0rem
+    font-size:1.0rem
     padding: .25rem;
+}
+
+.drag-left {
+    margin-left: -18px;
 }
 
 #social-icons {
