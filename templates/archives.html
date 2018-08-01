@@ -3,17 +3,19 @@
 {% block title %}Archives / {{SITENAME}}{% endblock %}
 
 {% block content %}
-   <article><header style="margin-bottom: 10px"><h1><i class="icon-th-list" style="margin-left:-21px; margin-right:5px; margin-top:-4px" title="Articles"></i>
-    <a href="{{SITEURL}}/archives.html">Articles for {{ SITENAME }}</a></h1></header></article>
+    <article>
+        <header style="margin-bottom: 10px"><h1>
+            <i class="fas fa-archive icon" aria-hidden="true"></i>All Articles
+        </h1></header>
+    </article>
 
-    <ul style="list-style: none;">
+    <section>
+    <ul style="list-style: none;">      
         {% for article in dates %}
-            <li><time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>:
-            <a href="{{SITEURL}}/{{article.url}}">
-                {{article.title}}
-            </a></li>
+            {# <time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>: #}
+            <li><a href="{{ SITEURL }}/{{ article.url }}"><i class="fas fa-file-alt icon" aria-hidden="true"></i>{{ article.title }}</a></li>
         {% endfor %}
     </ul>
+    </section>
+    
 {% endblock %}
-
-

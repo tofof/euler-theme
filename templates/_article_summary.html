@@ -1,5 +1,12 @@
 {% extends '_article_base.html' %}
 
+{% block article_header %}
+	<header>
+        <h1><a href="{{SITEURL}}/{{article.url}}" rel="bookmark">{{article.title}}</a></h1>
+        {# <time datetime="{{article.date.isoformat()}}">{{article.locale_date}}</time> #}
+    </header>
+{% endblock %}
+
 {% block article_content %}
     {{article.summary}}
     {% if (article.summary|length) < (article.content|length) %}   

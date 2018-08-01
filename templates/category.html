@@ -1,22 +1,26 @@
 {% extends "base.html" %}
 
-{% block title %}{{category}} / {{SITENAME}}{% endblock %}
+{% block title %}{{category.name}} / {{SITENAME}}{% endblock %}
 
 {% block content %}
-    <article><header style="margin-bottom: 10px"><h1>
-    <a href="{{SITEURL}}/categories.html"><span class="icon-folder-open" style="margin-left:-21px; margin-right:5px; margin-top:-4px" title="Categories"></span>Categories for {{ SITENAME }}</a></h1></header></article>
+    <article>
+        <header style="margin-bottom: 10px"><h1>
+            <a href="{{SITEURL}}/categories.html"><i class="fas fa-folder-open icon" aria-hidden="true"></i>Categories (back to list)</a>
+        </h1></header>
+    </article>
 
     <ul style="list-style: none;">
-        <li><span class="icon-folder-open" style="margin-left:-21px; margin-right:5px; margin-top:-2px" title="Category"></span>{{category}}
+        <li><i class="fas fa-folder-open icon" aria-hidden="true"></i>{{category}}</li>
     </ul>
+    
     <section>
+    <ul style="list-style: none;">
     {% for article in dates %}
         <article style="margin-left:2rem">
-            <time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>:
-            <a href="{{SITEURL}}/{{article.url}}">
-                {{article.title}}
-            </a>
+            {# <time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>: #}
+            <li><a href="{{ SITEURL }}/{{ article.url }}"><i class="fas fa-file-alt icon" aria-hidden="true"></i>{{article.title}}</a></li>
         </article>
     {% endfor %}
+    </ul>
     </section>
 {% endblock %}

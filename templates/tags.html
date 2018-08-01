@@ -3,13 +3,18 @@
 {% block title %}Tags / {{SITENAME}}{% endblock %}
 
 {% block content %}
-    <article><header style="margin-bottom: 10px"><h1>
-	<a href="{{SITEURL}}/tags.html"><i class="icon-tags" style="margin-left:-21px; margin-right:5px; margin-top:-2px" title="Tags"></i>Tags for {{ SITENAME }}</a></h1></header></article>
+    <article>
+    	<header style="margin-bottom: 10px"><h1>
+			<i class="fas fa-tags icon" aria-hidden="true"></i>All Tags
+		</h1></header>
+	</article>
 
+	<section>
 	<ul style="list-style: none;">		
 	    {%- for tag, articles in tags|sort %}
-	        <li><a href="{{ SITEURL }}/{{ tag.url }}"><i class="icon-tag" style="margin-left:-21px; margin-right:5px" title="Tag"></i>{{ tag }}</a> ({{ articles|count }})</li>
+	        <li><a href="{{ SITEURL }}/{{ tag.url }}"><i class="fas fa-tag icon" aria-hidden="true"></i>{{ tag }}</a> ({{ articles|count }})</li>
 	    {% endfor %}
 	</ul>
+	</section>
 	
 {% endblock %}

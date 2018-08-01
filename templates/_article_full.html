@@ -1,11 +1,18 @@
 {% extends '_article_base.html' %}
 
+{% block article_header %}
+	<header>
+        <h1><a href="{{SITEURL}}/{{article.url}}" rel="bookmark">{{article.title}}</a></h1>
+        {# <time datetime="{{article.date.isoformat()}}">{{article.locale_date}}</time> #}
+    </header>
+{% endblock %}
+
 {% block article_content %}
     {{article.content}}
 {% endblock %}
 
 {% block article_footer %}
-   <footer>
+	<footer>
         <p>Posted in: <a href="{{SITEURL}}/{{article.category.url}}">{{article.category}}</a></p>
         <p>Tagged as: {% for tag in article.tags %}<a href="{{SITEURL}}/{{tag.url}}">{{tag}}</a>{% if not loop.last %} / {% endif %}{% endfor %}</p>
     </footer>

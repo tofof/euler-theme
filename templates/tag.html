@@ -3,20 +3,24 @@
 {% block title %}{{tag.name}} / {{SITENAME}}{% endblock %}
 
 {% block content %}
-    <article><header style="margin-bottom: 10px"><h1>
-    <a href="{{SITEURL}}/tags.html"><i class="icon-tags" style="margin-left:-21px; margin-right:5px; margin-top:-2px" title="Tags"></i>Tags for {{ SITENAME }}</a></h1></header></article>
+    <article>
+        <header style="margin-bottom: 10px"><h1>
+            <a href="{{SITEURL}}/tags.html"><i class="fas fa-tags icon" aria-hidden="true"></i>Tags (back to list)</a>
+        </h1></header>
+    </article>
 
     <ul style="list-style: none;">
-        <li><i class="icon-tag" style="margin-left:-21px; margin-right:5px" title="Tag"></i>{{tag}}
+        <li><i class="fas fa-tag icon" aria-hidden="true"></i>{{tag}}</li>
     </ul>
+    
     <section>
+    <ul style="list-style: none;">
     {% for article in dates %}
         <article style="margin-left:2rem">
-            <time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>:
-            <a href="{{SITEURL}}/{{article.url}}">
-                {{article.title}}
-            </a>
+            {# <time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>: #}
+            <li><a href="{{ SITEURL }}/{{ article.url }}"><i class="fas fa-file-alt icon" aria-hidden="true"></i>{{article.title}}</a></li>
         </article>
     {% endfor %}
+    </ul>
     </section>
 {% endblock %}
