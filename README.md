@@ -1,7 +1,4 @@
-Lannisport is a [Pelican] [1] theme. It can be seen live at http://iovene.com/.
-
-## Preview
-![] [2]
+Euler is a [Pelican][1] theme. It can be seen live at http://tofof.com/.
 
 ## Variables
 
@@ -24,8 +21,7 @@ Some variables that could be used:
 
 ## License
 
-This theme is licensed under the [GPL v3] [3] license.
+This theme is licensed under the [GPL v3][2] license.
 
   [1]: https://github.com/getpelican/pelican/ "Pelican"
-  [2]: https://raw.github.com/siovene/lannisport/master/preview.png "Lannisport"
-  [3]: https://raw.github.com/siovene/lannisport/master/LICENSE
+  [2]: https://raw.github.com/siovene/euler-theme/blob/master/LICENSE
