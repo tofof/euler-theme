@@ -16,21 +16,17 @@
         <link rel="apple-touch-icon" sizes="114x114" href="{{SITEURL}}/theme/apple-touch-icon-iphone4.png" />
         <link rel="apple-touch-icon" sizes="144x144" href="{{SITEURL}}/theme/apple-touch-icon-ipad3.png" />
 
-        <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap2.css">
+<!--         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap2.css">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap2-responsive.css">
-        
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/colorbox.css">
-
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/main.css">
-
-        <script src="{{SITEURL}}/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+ -->
+        
+        <link rel="stylesheet" href="{{SITEURL}}/theme/css/purgedpure.css">
+        
+ <!--        <script src="{{SITEURL}}/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script> -->  
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span9">
@@ -84,7 +80,7 @@
                         <div id="social-icons">
                             {% if EMAIL_URL %}
                                 <span class="social-icon">
-                                    <a href="mailto:{{EMAIL_URL}}" target="_blank" title="Email">
+                                    <a href="mailto:{{EMAIL_URL}}" target="_blank" title="Email {{EMAIL_URL}}">
                                         <i class="fas fa-envelope"></i>
                                     </a>
                                 </span>
@@ -129,6 +125,12 @@
                 </div> <!-- logo+navigation span -->
             </div> <!-- row -->
         </div> <!-- /container -->
+        
+        <link rel="stylesheet" href="{{SITEURL}}/theme/css/colorbox.css">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> 
+
+        <script src="{{SITEURL}}/theme/js/vendor/modernizr-output.js"></script>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{SITEURL}}/theme/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
@@ -139,12 +141,16 @@
         <script src="{{SITEURL}}/theme/js/vendor/jquery.colorbox-min.js"></script>
 
         <script src="{{SITEURL}}/theme/js/main.js"></script>
+        
+        <!-- <link rel="stylesheet" href="{{SITEURL}}/theme/css/colorbox.css"> -->
 
-        <script>
-            var _gaq=[['_setAccount','{{GOOGLE_ANALYTICS_CODE}}'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+        {% if GOOGLE_ANALYTICS_CODE %}
+            <script>
+                var _gaq=[['_setAccount','{{GOOGLE_ANALYTICS_CODE}}'],['_trackPageview']];
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+        {% endif %}
     </body>
 </html>
