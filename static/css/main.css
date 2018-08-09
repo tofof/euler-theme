@@ -44,10 +44,18 @@ h1, h2 {
         min-width: 225px;
     }
     .container-fluid {
-        margin-left:4%;
-        margin-right:4%;
         display: flex;
     }
+    #social-icons {
+        max-width: none !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .container-fluid {
+        margin-left:4%;
+        margin-right:4%;
+    } 
 }
 
 @media (min-width: 1250px) {
@@ -167,11 +175,11 @@ h1, h2 {
 .icon-white {
     color:white;
     font-size:1.0rem;
-    padding: .25rem;
+    padding: .1rem;
 }
 
 .drag-left {
-    margin-left: -1rem;
+    margin-left: -1.33rem;
 }
 
 .icon {
@@ -180,21 +188,58 @@ h1, h2 {
 
 #social-icons {
     margin-top: .5rem;
-    font-size:1.0rem;
-}
-
-#social-icons {
+    font-size:1.5rem;
     text-align: center;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    max-width: 150px;
 }
 
 #social-icons a {
-    padding-left: 0.25rem;
+    padding-left: .45rem;
     color: white;
+    text-decoration: none;
+    
+    /*flex-grow: 1;*/
+    flex-shrink: 1;
+    
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    -o-filter: brightness(100%);
+    -ms-filter: brightness(100%);
+    filter: brightness(100%);
+    
+    -webkit-transition:all .2s ease-out, background 1s ease-in;
+    -moz-transition:all .2s ease-out, background 1s ease-in;
+    -o-transition:all .2s ease-out, background 1s ease-in;
+    -ms-transition:all .2s ease-out, background 1s ease-in;
+    transition:all .2s ease-out, background 1s ease-in;
 }
 
 #social-icons a:hover {
-    padding-left: 0.25rem;
-    color: #bbb;
+    -webkit-filter: brightness(70%);
+    -moz-filter: brightness(70%);
+    -o-filter: brightness(70%);
+    -ms-filter: brightness(70%);
+    filter: brightness(70%);
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1.5rem;
+}
+
+.icon-slashdot {
+    width: 1.22rem;
+    background-image: url("../img/icon-slashdot.png");
+    margin-right: -.15rem;
 }
 
 #sidebar h1, #sidebar h1 a {      
@@ -257,7 +302,13 @@ li.tag-4 {
     color: #999;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
+    #site-header, #site-footer, .content {
+        padding: 0 3rem 0 0;
+    }
+}
+
+@media screen and (min-width: 1250px) {
     #site-header, #site-footer, .content {
         padding: 0 3rem;
     }
@@ -384,6 +435,11 @@ td {
     /*border: 1px solid #ddd;*/
     padding: 3px 5px;
 }
+
+/*th {
+    text-align: left;
+    padding: 3px 5px;
+}*/
 
 
 blockquote,.pullquote,

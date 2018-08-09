@@ -51,8 +51,10 @@
 	</ul>
 </nav>
 
+
 <nav>
 	<h1>Contact</h1>
+<!-- 	
 	<ul>
 		<li>
 			<ul>
@@ -64,8 +66,15 @@
 			</ul>
 		</li>
 	</ul>
+ -->
+	<div id="social-icons">
+	    {% for title, icon, link in SOCIAL %}
+	    <a class="social-icon" href="{{ link }}" target="_blank" title={{ title }}>
+	        <i class="{{ icon }}"></i>
+	    </a>
+	    {% endfor %}
+	</div>
 </nav>
-
 
 
 

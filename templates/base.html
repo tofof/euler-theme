@@ -16,15 +16,11 @@
         <link rel="apple-touch-icon" sizes="114x114" href="{{SITEURL}}/theme/apple-touch-icon-iphone4.png" />
         <link rel="apple-touch-icon" sizes="144x144" href="{{SITEURL}}/theme/apple-touch-icon-ipad3.png" />
 
-<!--         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap2.css">
+        <link rel="stylesheet" href="{{SITEURL}}/theme/css/purgedpure.css">
+        <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap2.css">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap2-responsive.css">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/colorbox.css">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/main.css">
- -->
-        
-        <link rel="stylesheet" href="{{SITEURL}}/theme/css/purgedpure.css">
-        
- <!--        <script src="{{SITEURL}}/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script> -->  
     </head>
     <body>
         <div class="container-fluid">
@@ -76,51 +72,6 @@
                         <div id="navigation">
                             {% include 'navigation.html' %}
                         </div>
-                        
-                        <div id="social-icons">
-                            {% if EMAIL_URL %}
-                                <span class="social-icon">
-                                    <a href="mailto:{{EMAIL_URL}}" target="_blank" title="Email {{EMAIL_URL}}">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if GITHUB_URL %}
-                                <span class="social-icon">
-                                    <a href="{{GITHUB_URL}}" target="_blank" title="GitHub">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if LINKEDIN_URL %}
-                                <span class="social-icon">
-                                    <a href="{{LINKEDIN_URL}}" target="_blank" title="LinkedIn">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if TWITTER_URL %}
-                                <span class="social-icon">
-                                    <a href="{{TWITTER_URL}}" target="_blank" title="Twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if GOOGLE_URL %}
-                                <span class="social-icon">
-                                    <a href="{{GOOGLE_URL}}" target="_blank" title="Google">
-                                        <i class="fab fa-google-plus"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if FACEBOOK_URL %}
-                                <span class="social-icon">
-                                    <a href="{{FACEBOOK_URL}}" target="_blank" title="Facebook">
-                                        <i class="fab fa-facebook"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                        </div>
                     </aside>
                 </div> <!-- logo+navigation span -->
             </div> <!-- row -->
@@ -142,8 +93,6 @@
 
         <script src="{{SITEURL}}/theme/js/main.js"></script>
         
-        <!-- <link rel="stylesheet" href="{{SITEURL}}/theme/css/colorbox.css"> -->
-
         {% if GOOGLE_ANALYTICS_CODE %}
             <script>
                 var _gaq=[['_setAccount','{{GOOGLE_ANALYTICS_CODE}}'],['_trackPageview']];

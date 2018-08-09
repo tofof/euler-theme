@@ -53,7 +53,7 @@
   display: inherit !important;
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 959px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -96,7 +96,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 959px) {
   .row {
     margin-left: -20px;
     *zoom: 1;
@@ -587,7 +587,7 @@
   }
 }
 
-@media (max-width: 979px) {
+@media (max-width: 959px) {
   body {
     padding-top: 0;
   }
@@ -739,7 +739,7 @@
   }
 }
 
-@media (min-width: 980px) {
+@media (min-width: 960px) {
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;
