@@ -308,7 +308,7 @@ li.tag-4 {
     }
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1125px) {
     #site-header, #site-footer, .content {
         padding: 0 3rem;
     }
