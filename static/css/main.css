@@ -1,11 +1,15 @@
 html {
-    overflow-y: scroll;
+    height: 100%;
 }
 
 body {
-    background-image: url(../img/bg.jpg);
     border-top: .5rem solid #DC8C3C;	/*was DC143C*/
     color: #444;
+    
+    background-image: url(../img/bg.jpg);
+    background-repeat: repeat;
+
+    min-height: 99vh;
 
     -webkit-box-shadow: inset 0px .5rem 2rem 0px rgba(0, 0, 0, 0.33);
     box-shadow: inset 0px .5rem 2rem 0px rgba(0, 0, 0, 0.33);
@@ -46,7 +50,7 @@ h1, h2 {
     .container-fluid {
         display: flex;
     }
-    #social-icons {
+    #social-outbound-icons {
         max-width: none !important;
     }
 }
@@ -107,7 +111,7 @@ h1, h2 {
     font-size: 2rem;
     font-weight: 700;
     line-height: 2.5rem;
-    border-bottom: 1px dashed #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 #site-header h1 small {
@@ -134,7 +138,7 @@ h1, h2 {
     font-style: italic;
     color: #bbb;
     position: relative;
-    border-bottom: 1px dashed #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
     padding-bottom: .5rem;
 }
 
@@ -186,7 +190,7 @@ h1, h2 {
     margin-right: 5px;
 }
 
-#social-icons {
+#social-outbound-icons {
     margin-top: .5rem;
     font-size:1.5rem;
     text-align: center;
@@ -199,7 +203,7 @@ h1, h2 {
     max-width: 150px;
 }
 
-#social-icons a {
+#social-outbound-icons a {
     padding-left: .45rem;
     color: white;
     text-decoration: none;
@@ -220,7 +224,7 @@ h1, h2 {
     transition:all .2s ease-out, background 1s ease-in;
 }
 
-#social-icons a:hover {
+#social-outbound-icons a:hover {
     -webkit-filter: brightness(70%);
     -moz-filter: brightness(70%);
     -o-filter: brightness(70%);
@@ -402,7 +406,7 @@ article footer p {
 #site-footer {
     margin-bottom: 2rem;
     padding-top: .75rem;
-    border-top: 1px dashed #e0e0e0;
+    border-top: 1px solid #e0e0e0;
 }
 
 #site-footer p {

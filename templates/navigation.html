@@ -53,23 +53,11 @@
 
 
 <nav>
-	<h1>Contact</h1>
-<!-- 	
-	<ul>
-		<li>
-			<ul>
-				{% if EMAIL_URL %}
-					<li><i class="fas fa-envelope icon-white drag-left"></i>
-						<a href="mailto:{{EMAIL_URL}}" target="_blank" title="Email">{{EMAIL_URL}}</a>
-                    </li>
-                {% endif %}
-			</ul>
-		</li>
-	</ul>
- -->
-	<div id="social-icons">
+	<h1><a href="mailto:{{EMAIL_URL}}" target="_blank" title="Email {{EMAIL_URL}}">Contact</a></h1>
+
+	<div id="social-outbound-icons">
 	    {% for title, icon, link in SOCIAL %}
-	    <a class="social-icon" href="{{ link }}" target="_blank" title={{ title }}>
+	    <a class="social-outbound-icon" href="{{ link }}" target="_blank" title="{{ title }}">
 	        <i class="{{ icon }}"></i>
 	    </a>
 	    {% endfor %}
