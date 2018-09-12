@@ -5,17 +5,31 @@
 {% block content %}
     <article>
         <header style="margin-bottom: 10px"><h1>
-            <i class="fas fa-archive icon" aria-hidden="true"></i>All Articles
+            <i class="fas fa-archive icon" aria-hidden="true"></i>Articles
         </h1></header>
     </article>
-
-    <section>
+    
     <ul style="list-style: none;">      
         {% for article in dates %}
             {# <time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>: #}
             <li><a href="{{ SITEURL }}/{{ article.url }}"><i class="fas fa-file-alt icon" aria-hidden="true"></i>{{ article.title }}</a></li>
         {% endfor %}
     </ul>
+    
+    <article>
+        <header style="margin-bottom: 10px"><h1>
+            <i class="fas fa-archive icon" aria-hidden="true"></i>Other Pages
+        </h1></header>
+    </article>
+    <ul style="list-style: none;">
+        {% for page in pages %}
+            <li>
+                <a href="{{SITEURL}}/{{page.url}}"><i class="fas fa-file-alt icon" aria-hidden="true"></i>{{page.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <section>
     </section>
     
 {% endblock %}
