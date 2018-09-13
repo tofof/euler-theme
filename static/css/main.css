@@ -286,19 +286,19 @@ ul.tagcloud li {
 }
 
 li.tag-1 {
-    font-size: 1.4rem !important;
+    font-size: 143% !important;
 }
-li
-.tag-2 {
-    font-size: 1.15rem !important;
+
+li.tag-2 {
+    font-size: 111% !important;
 }
 
 li.tag-3 {
-    font-size: .875rem !important;
+    font-size: 82% !important;
 }
 
 li.tag-4 {
-    font-size: .6rem !important;
+    font-size: 50% !important;
 }
 
 #navigation nav li .separator {
